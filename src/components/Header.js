@@ -36,12 +36,16 @@ class SimpleAppBar extends Component {
   }
   // console.log("Props", props)
   componentDidMount(){
-    if(window.web3){
-      this.setState({
-        seed: jsNumberForAddress(window.web3.eth.defaultAccount),
-        address: window.web3.eth.defaultAccount
-      })
-    }
+    setTimeout(()=> {
+      if(window.web3.eth){
+        console.log("reached~~~")
+        this.setState({
+          seed: window.web3.eth.defaultAccount ? jsNumberForAddress(window.web3.eth.defaultAccount) : '',
+          address: window.web3.eth.defaultAccount
+        })
+      }
+    }, 1000)
+
   }
   render() {
     return(
@@ -55,7 +59,7 @@ class SimpleAppBar extends Component {
             <Jazzicon diameter={25} seed={this.state.seed} className="mr15" />
             <div>   Address: </div>
           </div>
-          <Typography className='txt-white ml15'> {shortenAddress(window.web3.eth.defaultAccount)} </Typography>
+          <Typography className='txt-white ml15'> {shortenAddress(this.state.address)} </Typography>
 
         </Toolbar>
       </AppBar>

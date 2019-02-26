@@ -17,7 +17,6 @@ const styles = theme => ({
     display: 'block', // Fix IE 11 issue.
     marginLeft: theme.spacing.unit * 3,
     marginRight: theme.spacing.unit * 3,
-    marginTop: 100,
     [theme.breakpoints.up(400 + theme.spacing.unit * 3 * 2)]: {
       width: 400,
       marginLeft: 'auto',
@@ -69,11 +68,11 @@ class SignIn extends Component{
     return (
       <main className={classes.main}>
         <CssBaseline />
-        <Paper className={classes.paper}>
+        <Paper className={classes.paper}style={{"padding-bottom": "70px"}}>
           <Avatar className={classes.avatar}>
           </Avatar>
           <Typography component="h1" variant="h5">
-            Totle Widget
+            Totle Trading Widget
           </Typography>
           <form className={classes.form}>
             <FormControl margin="normal" required fullWidth>

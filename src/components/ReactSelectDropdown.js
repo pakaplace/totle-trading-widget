@@ -244,7 +244,7 @@ class IntegrationReactSelect extends React.Component {
           "swap": {
             "from": this.state.sellToken.value,
             "to": this.state.buyToken.value,
-            "amount": '10000000000000000', //this.state.amount,
+            "amount": shiftDecimal(this.state.amount), //this.state.amount,
             "minFillPercent": 100,
             "minSlippagePercent": 3
           },
@@ -359,11 +359,12 @@ class IntegrationReactSelect extends React.Component {
             placeholder="Amount"
             onChange={this.handleInputChange.bind(this)}
             onBlur={this.handleBlur.bind(this)}
+            style={{"margin-top":"10px"}}
           />
           <p style={errorStyle}>{this.state.apiError}</p>
           <p>{this.state.orderIsAvailable ?
-            `Best Available Order: Sell ${this.state.sellToken.label} for ${this.state.buyToken.label} at price: ${this.state.response.price.substring(0, 6)} on ${this.state.response.exchange} ` 
-            : 'Best Available Order:'}
+            `Best Available Order: Sell ${this.state.amount} of ${this.state.sellToken.label} for ${this.state.buyToken.label} at price: ${this.state.response.price.substring(0, 6)} on ${this.state.response.exchange} ` 
+            : ''}
           </p>
           <Button
               fullWidth
