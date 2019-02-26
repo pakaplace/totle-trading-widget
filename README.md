@@ -1,6 +1,8 @@
 # Totle Trading Widget
 
-Totle Trading Widget is a quick way to trade any commmon token pair listed on the API. It can be hosted standalone, added to your site, or packaged and delivered in a script CDN. 
+Totle Trading Widget is a quick way to trade any commmon token pair listed on the API at the lowest possible price. It can be hosted standalone, added to your site, or packaged and delivered in a script CDN. 
+
+Demo Recording: https://consensys.zoom.us/recording/share/CNEXJ0XvYvqiX9N-iqUXI0-Fy2n9tQX-i0jJM2LCJSewIumekTziMw
 
 ## The Problem
 * I often use trading widgets or Uniswap out of convenience , but am usually not happy with the prices. Usually, due to low liquidity or few participating relayers (Airswap), I end up paying 1-5% over market rate for token trades. 
